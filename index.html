@@ -54,10 +54,18 @@
             bids: [{
                 bidder: 'appnexus',
                 params: {
-                    placementId: 13232361,
+                    placementId: 1,
                     video: {
                         skippable: true,
                         playback_method: ['auto_play_sound_off']
+                    }
+                }
+            },
+            {
+                bidder: 'prebid',
+                params: {
+                    storedrequest: {
+                       id: '44556677'
                     }
                 }
             }]
@@ -77,13 +85,13 @@
                     endpoint: 'https://ec2-18-191-160-21.us-east-2.compute.amazonaws.com/openrtb2/auction',
                     enabled: true,
                     accountId: 'c9d412ee-3cc6-4b66-9326-9f49d528f13e',
-                    bidders: ['appnexus'],
+                    bidders: ['appnexus', 'prebid'],
                     adapterOptions: {
                         appnexus: {
                             additionalKeywords: {
                                 foo: ['keyword1', 'keyword2'],
                                 bar: ['keyword3', 'keyword4']
-                            },
+                            }
                         }
                     }
                 }
